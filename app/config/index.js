@@ -1,8 +1,9 @@
-var configValues = require('./config');
+'use strict';
 
+import configValues from './config';
 
 module.exports = {
-  getDbConnectionString: function () {
+  getDbConnectionString: () => {
     return 'mongodb://' + configValues.uname + ':' + configValues.pwd +
       '@ds011870.mlab.com:11870/node-todo';
   }

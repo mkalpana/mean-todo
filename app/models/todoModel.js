@@ -1,12 +1,15 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var todoSchema = new Schema({
+'use strict';
+
+import mongoose from 'mongoose';
+
+let Schema = mongoose.Schema;
+let todoSchema = new Schema({
   username: String,
   todo: String,
   isDone: Boolean,
   hasAttachment: Boolean
 });
 
-var ToDos = mongoose.model('ToDos', todoSchema);
+let ToDos = mongoose.model('ToDos', todoSchema);
 
 module.exports = ToDos;

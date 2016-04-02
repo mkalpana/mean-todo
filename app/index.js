@@ -1,11 +1,14 @@
-var express = require('express');
-var app = express();
-var mongoose = require('mongoose');
-var config = require('./config');
-var setupController = require('./controllers/setupController');
-var todoController = require('./controllers/todoController');
+'use strict';
 
-var port = process.env.PORT || 3000;
+import express from 'express';
+import mongoose from 'mongoose';
+import config from './config';
+import setupController from './controllers/setupController';
+import todoController from './controllers/todoController';
+
+let app = express();
+
+let port = process.env.PORT || 3000;
 
 app.use('/assets', express.static(__dirname + '/public'));
 

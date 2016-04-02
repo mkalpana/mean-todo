@@ -1,9 +1,11 @@
-var Todos = require('../models/todoModel');
+'use strict';
 
-module.exports = function (app) {
-  app.get('/api/setupTodos', function (req, res) {
+import Todos from '../models/todoModel';
 
-    var seedTodos = [
+module.exports = (app) => {
+  app.get('/api/setupTodos', (req, res) => {
+
+    let seedTodos = [
       {
         username: 'test',
         todo: 'Buy milk',
